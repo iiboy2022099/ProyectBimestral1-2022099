@@ -2,7 +2,7 @@ import { response, request } from "express";
 import bcryptjs from 'bcryptjs';
 import User from './user.model.js';
 
-/*export const getUsers = async (req = request, res = response) => {
+export const getUsers = async (req = request, res = response) => {
     const { limite, desde } = req.query;
     const query = { estado: true };
 
@@ -17,7 +17,7 @@ import User from './user.model.js';
         total,
         users,
     });
-}*/
+}
 
 export const postUser = async (req, res) => {
     const { name, email, password, role } = req.body;
@@ -30,7 +30,7 @@ export const postUser = async (req, res) => {
     });
 }
 
-/*export const updateUser = async (req, res = response) => {
+export const putUser = async (req, res = response) => {
     const { id } = req.params;
     const { _id, password, email, ...rest } = req.body;
     if (password) {
@@ -43,7 +43,7 @@ export const postUser = async (req, res) => {
         msg: 'Usuario Actualizado',
         user,
     });
-}*/
+}
 
 /*export const deleteUser = async (req, res) => {
     const { id } = req.params;

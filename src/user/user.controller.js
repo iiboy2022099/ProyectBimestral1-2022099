@@ -45,10 +45,12 @@ export const putUser = async (req, res = response) => {
     });
 }
 
-/*export const deleteUser = async (req, res) => {
+export const deleteUser = async (req, res) => {
     const { id } = req.params;
     const user = await User.findByIdAndUpdate(id, { estado: false });
     const authenticatedUser = req.user;
+
     res.status(200).json({ msg: 'Usuario desactivado', user, authenticatedUser });
-}*/
+}
+
 

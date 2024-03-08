@@ -6,12 +6,14 @@ import helmet from 'helmet'
 import morgan from 'morgan'
 import { dbConnection } from './mongo.js';
 import userRoutes from '../src/user/user.routes.js';
+import authRoutes from '../src/auth/auth.routes.js';
 
 class Server{
     constructor(){
         this.app = express();
         this.port = process.env.PORT;
         this.usuarioPath = '/ProyectSystem/v2/users';
+        this.authPath = '/ProyectSystem/v2/auth';
 
         this.middlewares();
         this.conectarDB();
@@ -32,6 +34,7 @@ class Server{
 
     routes(){
         this.app.use(this.usuarioPath, userRoutes);
+        this.app.use(this.authPath, authRoutes);
     }
 
     listen(){

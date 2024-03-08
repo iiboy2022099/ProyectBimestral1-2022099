@@ -1,8 +1,8 @@
-const { Schema, model } = require('mongoose');
+import mongoose from 'mongoose';
 
-const CategorySchema = Schema ({
+const CategorySchema = mongoose.Schema({
 
-    name: {
+    categoryName: {
         type: String,
         required: [true, 'El nombre de la categoría es obligatorio']
     },
@@ -11,11 +11,10 @@ const CategorySchema = Schema ({
         type: String,
         required: [true, 'La descripción de la categoría es obligatoria']
     },
-    estado: {
-        type: String,
-        enum: ["activo", "inactivo"],
-        default: "activo"
+    estado:{
+        "type": Boolean,
+        default: true
     }
 });
 
-module.exports = model('Category', CategorySchema);
+export default mongoose.model('Category', CategorySchema);

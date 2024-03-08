@@ -27,5 +27,17 @@ export const getCategory = async (req = request, res = response) => {
     });
 }
 
+export const putCategory = async (req, res = response) => {
+    const { id } = req.params;
+    const { _id, categoryName,...rest } = req.body;
+    await Category.findByIdAndUpdate(id, rest);
+    const category= await Category.findOne({_id: id});
+    res.status(200).json({
+        msg: 'Categoria Actualizada',
+        category,
+    });
+
+}
+
 
 

@@ -2,8 +2,12 @@ import { Router } from "express";
 import { check } from "express-validator";
 import {
     postCategory,
-    getCategory
+    getCategory,
+    putCategory
     } from "./category.controller.js";
+    import {
+        existeCategoriaById
+    }from "../helpers/db-validators.js";
     import { validarCampos } from "../middlewares/validar-campos.js";
 
     const router = Router();
@@ -17,6 +21,15 @@ import {
             validarCampos,
         ],postCategory
     );
-
+    
+    router.put(
+        "/:id",
+        [
+            check("id", "No es un ID valido").isMongoId(),
+            check("id").custom(existeCategoriaById),
+            validarCampos,
+        ],
+        putCategory
+    );
     
 export default router;

@@ -39,5 +39,18 @@ export const putCategory = async (req, res = response) => {
 
 }
 
+export const CategoryDelete = async (req, res) => {
+    const {id} = req.params;
+    await Category.findByIdAndUpdate(id,{estado: false});
+
+    const category = await Category.findOne({_id: id});
+
+    res.status(200).json({
+        msg: 'La Categoria a sido eliminada exitosamente',
+        category
+    });
+}
+
+
 
 

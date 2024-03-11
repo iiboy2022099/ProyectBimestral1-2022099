@@ -3,7 +3,8 @@ import { check } from "express-validator";
 import {
     postCategory,
     getCategory,
-    putCategory
+    putCategory,
+    CategoryDelete
     } from "./category.controller.js";
     import {
         existeCategoriaById
@@ -31,5 +32,15 @@ import {
         ],
         putCategory
     );
+
+    router.delete(
+        "/:id",
+        [
+            check("id", "El id no es un formato válido de MongoDB").isMongoId(),
+            check("id").custom(existeCategoriaById),
+            validarCampos
+        ], CategoryDelete);
+    
+    
     
 export default router;

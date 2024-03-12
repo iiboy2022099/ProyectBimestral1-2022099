@@ -20,27 +20,26 @@ export const clientesGet = async (req, res) => {
     });
 }
     
-export const putCliente = async (req, res = response) => {
+export const putClient = async (req, res = response) => {
+    const {id} = req.params;
+    const {_id, password, role, ...rest} = req.body;
 
-    const { id } = req.params;
-    const { _id, password, correo, nombre, ...resto } = req.body;
-
-    if(password) {
-
+    if(password){
         const salt = bcryptjs.genSaltSync();
-        resto.password = bcryptjs.hashSync(password, salt);
+        rest.password = bcryptjs.hashSync(password, salt);
 
-    await Cliente.findByIdAndUpdate(id, resto);
-
-    const cliente = await Cliente.findOne({_id: id});
-
-    res.status(200).json({
-        msg: 'cliente actualizado',
-        cliente
-    })
     }
 
-};
+    await Cliente.findByIdAndUpdate(id, rest);
+
+    const clientes = await Cliente.findOne({_id: id});
+
+    res.status(200).json({
+        msg: 'Updated clientes',
+        clientes,
+    });
+}
+
 
 export const clientePost = async (req, res) => {
     
@@ -58,4 +57,12 @@ export const clientePost = async (req, res) => {
         cliente
     });
     
+}
+
+export const clienteDelete = async (req, res) => {
+    const { id } = req.params;
+    const cliente = await Cliente.findByIdAndUpdate(id, { estado: false });
+    const authenticatedcliente = req.cliente;
+
+    res.status(200).json({ msg: 'cliente desactivado', cliente, authenticatedcliente });
 }

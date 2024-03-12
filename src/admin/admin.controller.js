@@ -21,27 +21,28 @@ export const adminsGet = async (req, res) => {
     });
 }
     
+
 export const putAdmin = async (req, res = response) => {
+    const {id} = req.params;
+    const {_id, password,correo,role, ...rest} = req.body;
 
-    const { id } = req.params;
-    const { _id, password, correo, nombre, ...resto } = req.body;
-
-    if(password) {
-
+    if(password){
         const salt = bcryptjs.genSaltSync();
-        resto.password = bcryptjs.hashSync(password, salt);
+        rest.password = bcryptjs.hashSync(password, salt);
 
-    await Admin.findByIdAndUpdate(id, resto);
+    }
+
+    await Admin.findByIdAndUpdate(id, rest);
 
     const admin = await Admin.findOne({_id: id});
 
     res.status(200).json({
-        msg: 'admin actualizado',
-        admin
-    })
-    }
+        msg: 'Updated ADMIN',
+        admin,
+    });
+}
 
-};
+
 
 export const adminPost = async (req, res) => {
     
@@ -57,4 +58,12 @@ export const adminPost = async (req, res) => {
     res.status(200).json({
         admin
     });
+}
+
+export const admindelete = async (req, res) => {
+    const { id } = req.params;
+    const admin = await Admin.findByIdAndUpdate(id, { estado: false });
+    const authenticatedAdmin = req.admin;
+
+    res.status(200).json({ msg: 'Admin desactivado', admin, authenticatedAdmin });
 }

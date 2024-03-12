@@ -39,7 +39,7 @@ export const putCategoria = async (req, res = response) => {
 
 }
 
-export const CategoriaDelete = async (req, res) => {
+export const categoriaDelete = async (req, res) => {
     const {id} = req.params;
     await Categoria.findByIdAndUpdate(id,{estado: false});
 

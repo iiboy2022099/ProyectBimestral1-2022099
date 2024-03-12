@@ -4,7 +4,7 @@ import {
     postCategoria,
     getCategoria,
     putCategoria,
-    CategoriaDelete
+    categoriaDelete
     } from "./category.controller.js";
     import {
         existeCategoriaById
@@ -41,6 +41,6 @@ import {
             check("id", "El id no es un formato válido de MongoDB").isMongoId(),
             check("id").custom(existeCategoriaById),
             validarCampos
-        ], CategoriaDelete);
+        ], categoriaDelete);
     
     export default router;

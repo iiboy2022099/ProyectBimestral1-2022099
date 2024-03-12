@@ -1,0 +1,276 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "ProyectFinal2022099",
+    "dateExported": "2024-03-12T14:47:19.942Z",
+    "version": "1.1",
+    "folders": [
+        {
+            "_id": "85951aae-9fb9-4167-b095-89e5cccf1e67",
+            "name": "ADMIN",
+            "containerId": "",
+            "created": "2024-03-12T03:39:36.705Z",
+            "sortNum": 10000
+        },
+        {
+            "_id": "c0dc0c9a-cc67-42fd-9fa5-dd062b5d5676",
+            "name": "CLIENT",
+            "containerId": "",
+            "created": "2024-03-12T03:39:51.243Z",
+            "sortNum": 30000
+        }
+    ],
+    "requests": [
+        {
+            "_id": "f2ce29d2-c030-458a-8306-87138eaf95c9",
+            "colId": "4b7e51e0-4aa9-4a67-b5e9-84231240bf9c",
+            "containerId": "",
+            "name": "login",
+            "url": "http://localhost:3000/ProyectSystem/v3/auth/login",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-03-12T03:40:24.418Z",
+            "modified": "2024-03-12T04:59:14.161Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"correo\":\"jbecheverrias@gmail.com\",\n  \"password\":\"123456\",\n  \"role\":\"ADMIN_ROLE\"\n}",
+                "form": []
+            },
+            "reqType": "get",
+            "tests": []
+        },
+        {
+            "_id": "644449b1-56ad-4aab-ba52-b3379d7e0669",
+            "colId": "4b7e51e0-4aa9-4a67-b5e9-84231240bf9c",
+            "containerId": "85951aae-9fb9-4167-b095-89e5cccf1e67",
+            "name": "PostAdmin",
+            "url": "http://localhost:3000/ProyectSystem/v3/admin",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2024-03-12T03:41:43.231Z",
+            "modified": "2024-03-12T04:36:21.511Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nombre\":\"Braulio Echeverria\",\n  \"password\":\"123456\",\n  \"correo\":\"jbecheverrias@gmail.com\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "78d2373c-8ce5-4028-a02d-fc0c9c09aacc",
+            "colId": "4b7e51e0-4aa9-4a67-b5e9-84231240bf9c",
+            "containerId": "c0dc0c9a-cc67-42fd-9fa5-dd062b5d5676",
+            "name": "postClient",
+            "url": "http://localhost:3000/ProyectSystem/v3/cliente",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2024-03-12T03:42:35.351Z",
+            "modified": "2024-03-12T03:46:30.193Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nombre\":\"Horacio Recinos\",\n  \"password\":\"123456\",\n  \"correo\":\"Hrecinos@gmail.com\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "712e95f3-a7ff-4ade-beaf-7a75a8794d1b",
+            "colId": "4b7e51e0-4aa9-4a67-b5e9-84231240bf9c",
+            "containerId": "85951aae-9fb9-4167-b095-89e5cccf1e67",
+            "name": "getUserAdmin",
+            "url": "http://localhost:3000/ProyectSystem/v3/admin",
+            "method": "GET",
+            "sortNum": 50000,
+            "created": "2024-03-12T03:53:38.877Z",
+            "modified": "2024-03-12T03:53:45.797Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "a296f942-e862-440a-9da2-2bf3506f43fd",
+            "colId": "4b7e51e0-4aa9-4a67-b5e9-84231240bf9c",
+            "containerId": "c0dc0c9a-cc67-42fd-9fa5-dd062b5d5676",
+            "name": "getUserClient",
+            "url": "http://localhost:3000/ProyectSystem/v3/cliente",
+            "method": "GET",
+            "sortNum": 60000,
+            "created": "2024-03-12T03:54:55.197Z",
+            "modified": "2024-03-12T04:24:08.176Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "4348e360-30d7-45be-9f6e-391415e30a6f",
+            "colId": "4b7e51e0-4aa9-4a67-b5e9-84231240bf9c",
+            "containerId": "85951aae-9fb9-4167-b095-89e5cccf1e67",
+            "name": "putAdmin",
+            "url": "http://localhost:3000/ProyectSystem/v3/admin/65efcf1d50a0b743ae723bfc",
+            "method": "PUT",
+            "sortNum": 70000,
+            "created": "2024-03-12T03:58:28.018Z",
+            "modified": "2024-03-12T04:00:51.511Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n \"nombre\":\"Juan Jose Carlos\" \n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "9624323b-50b1-4f3e-a5d4-fd5e860bc83b",
+            "colId": "4b7e51e0-4aa9-4a67-b5e9-84231240bf9c",
+            "containerId": "c0dc0c9a-cc67-42fd-9fa5-dd062b5d5676",
+            "name": "putClient",
+            "url": "http://localhost:3000/ProyectSystem/v3/cliente/65efcfffc02285ebd149b4b8",
+            "method": "PUT",
+            "sortNum": 80000,
+            "created": "2024-03-12T04:22:35.022Z",
+            "modified": "2024-03-12T04:41:42.693Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nombre\":\"Oscar Iboy\",\n  \"correo\":\"oiboy@kinal.edu.gt\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "de2b995f-ae7c-426f-97b3-138e28188338",
+            "colId": "4b7e51e0-4aa9-4a67-b5e9-84231240bf9c",
+            "containerId": "85951aae-9fb9-4167-b095-89e5cccf1e67",
+            "name": "deleteAdmin",
+            "url": "http://localhost:3000/ProyectSystem/v3/admin/65efcf1d50a0b743ae723bfc",
+            "method": "DELETE",
+            "sortNum": 90000,
+            "created": "2024-03-12T04:32:43.611Z",
+            "modified": "2024-03-12T04:37:20.104Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWVmY2YxZDUwYTBiNzQzYWU3MjNiZmMiLCJpYXQiOjE3MTAyMTgyMjgsImV4cCI6MTcxMDIyMTgyOH0.luGiarZMRtP2EfbjLYo9cPCLrWFgE2p4O3oR83ZUJAQ"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "06ec4ed0-8f69-452d-b547-f3ec130cbc3a",
+            "colId": "4b7e51e0-4aa9-4a67-b5e9-84231240bf9c",
+            "containerId": "c0dc0c9a-cc67-42fd-9fa5-dd062b5d5676",
+            "name": "deleteClient",
+            "url": "http://localhost:3000/ProyectSystem/v3/cliente/65efcfffc02285ebd149b4b8",
+            "method": "DELETE",
+            "sortNum": 100000,
+            "created": "2024-03-12T04:41:13.812Z",
+            "modified": "2024-03-12T04:45:01.787Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWVmZDAxN2MwMjI4NWViZDE0OWI0YmMiLCJpYXQiOjE3MTAyMTg2ODMsImV4cCI6MTcxMDIyMjI4M30.3oHUEUzpp0lKLxOgE6iYFJFjeWZgyqjI2kCkAu13etE"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "8a91f96e-a54f-4f13-b81c-34eec4310752",
+            "colId": "4b7e51e0-4aa9-4a67-b5e9-84231240bf9c",
+            "containerId": "85951aae-9fb9-4167-b095-89e5cccf1e67",
+            "name": "PostCategoria",
+            "url": "http://localhost:3000/ProyectSystem/v3/categoria",
+            "method": "POST",
+            "sortNum": 110000,
+            "created": "2024-03-12T04:56:23.048Z",
+            "modified": "2024-03-12T14:14:31.369Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWVmZGJjNTExOTlmMWU3YTU0Y2Y0ZjAiLCJpYXQiOjE3MTAyNTI4NDEsImV4cCI6MTcxMDI1NjQ0MX0.hGECo_tuSNA9qC8Gft5F9KfjRPgm4Es_2lNnhrEiBEc"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"categoryName\": \"Carnes de Animales\",\n  \"description\":\"Listos para el sarten y disfrutar para comer\"\n}",
+                "form": []
+            },
+            "reqType": "post",
+            "tests": []
+        },
+        {
+            "_id": "529625cc-e651-4d35-b917-e1156b9836c6",
+            "colId": "4b7e51e0-4aa9-4a67-b5e9-84231240bf9c",
+            "containerId": "85951aae-9fb9-4167-b095-89e5cccf1e67",
+            "name": "getCategoria",
+            "url": "http://localhost:3000/ProyectSystem/v3/categoria",
+            "method": "GET",
+            "sortNum": 120000,
+            "created": "2024-03-12T05:05:28.169Z",
+            "modified": "2024-03-12T14:14:40.815Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWVmZGJjNTExOTlmMWU3YTU0Y2Y0ZjAiLCJpYXQiOjE3MTAyNTI4NDEsImV4cCI6MTcxMDI1NjQ0MX0.hGECo_tuSNA9qC8Gft5F9KfjRPgm4Es_2lNnhrEiBEc"
+                }
+            ],
+            "params": [],
+            "reqType": "get",
+            "tests": []
+        },
+        {
+            "_id": "d86fbc78-30cf-4b84-af35-06e572f940ce",
+            "colId": "4b7e51e0-4aa9-4a67-b5e9-84231240bf9c",
+            "containerId": "85951aae-9fb9-4167-b095-89e5cccf1e67",
+            "name": "putCategoria",
+            "url": "http://localhost:3000/ProyectSystem/v3/categoria/65efe667607f35e0c80a45ba",
+            "method": "PUT",
+            "sortNum": 130000,
+            "created": "2024-03-12T05:12:00.365Z",
+            "modified": "2024-03-12T14:37:39.385Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWVmZGJjNTExOTlmMWU3YTU0Y2Y0ZjAiLCJpYXQiOjE3MTAyNTI4NDEsImV4cCI6MTcxMDI1NjQ0MX0.hGECo_tuSNA9qC8Gft5F9KfjRPgm4Es_2lNnhrEiBEc"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n   \"description\":\"Listos para compatir en familia y en un buen asado\"\n}",
+                "form": []
+            },
+            "reqType": "put",
+            "tests": []
+        },
+        {
+            "_id": "93a34989-e98a-4bf5-8030-66527dcdf050",
+            "colId": "4b7e51e0-4aa9-4a67-b5e9-84231240bf9c",
+            "containerId": "85951aae-9fb9-4167-b095-89e5cccf1e67",
+            "name": "deleteCategoria",
+            "url": "http://localhost:3000/ProyectSystem/v3/categoria/65efb20881501a006c265348",
+            "method": "DELETE",
+            "sortNum": 140000,
+            "created": "2024-03-12T14:15:15.451Z",
+            "modified": "2024-03-12T14:39:40.946Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWVmZGJjNTExOTlmMWU3YTU0Y2Y0ZjAiLCJpYXQiOjE3MTAyNTI4NDEsImV4cCI6MTcxMDI1NjQ0MX0.hGECo_tuSNA9qC8Gft5F9KfjRPgm4Es_2lNnhrEiBEc"
+                }
+            ],
+            "params": [],
+            "reqType": "get",
+            "tests": []
+        }
+    ]
+}

@@ -1,6 +1,7 @@
 import Role from '../role/role.model.js';
 import Admin from '../admin/admin.model.js';
 import Cliente from '../client/client.model.js';
+import Categoria from '../category/category.model.js';
 
 export const esRoleValido = async (role = '') => {
     const existeRol = await Role.findOne({role});
@@ -29,7 +30,7 @@ export const existeUsuarioById = async (id = '') => {
 }
 
 export const existeCategoriaById = async (id = '') => {
-    const existeCategoria = await Admin.findById(id);
+    const existeCategoria = await Categoria.findById(id);
     
     if (!existeCategoria){
         throw new Error(`El ID: ${id} no existe`);

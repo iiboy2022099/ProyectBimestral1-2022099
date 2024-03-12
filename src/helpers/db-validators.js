@@ -28,3 +28,11 @@ export const existeUsuarioById = async (id = '') => {
     }
 }
 
+export const existeCategoriaById = async (id = '') => {
+    const existeCategoria = await Admin.findById(id);
+    
+    if (!existeCategoria){
+        throw new Error(`El ID: ${id} no existe`);
+    }
+}
+

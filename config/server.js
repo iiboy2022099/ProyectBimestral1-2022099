@@ -5,18 +5,18 @@ import cors from 'cors'
 import helmet from 'helmet'
 import morgan from 'morgan'
 import { dbConnection } from './mongo.js';
-import userRoutes from '../src/user/user.routes.js';
+import adminRoutes from  '../src/admin/admin.routes.js';
+import clienteRoutes from  '../src/client/client.routes.js';
 import authRoutes from '../src/auth/auth.routes.js';
-import categoryRoutes from '../src/category/category.routes.js';
 
 
 class Server{
     constructor(){
         this.app = express();
         this.port = process.env.PORT;
-        this.usuarioPath = '/ProyectSystem/v2/users';
-        this.authPath = '/ProyectSystem/v2/auth';
-        this.categoryPath = '/ProyectSystem/v2/category';
+        this.adminPath = '/ProyectSystem/v3/admin'
+        this.clientePath = '/ProyectSystem/v3/cliente'
+        this.authPath = '/ProyectSystem/v3/auth';
 
         this.middlewares();
         this.conectarDB();
@@ -36,9 +36,10 @@ class Server{
     }
 
     routes(){
-        this.app.use(this.usuarioPath, userRoutes);
+        this.app.use(this.adminPath, adminRoutes);
+        this.app.use(this.clientePath, clienteRoutes);
         this.app.use(this.authPath, authRoutes);
-        this.app.use(this.categoryPath, categoryRoutes);
+
     }
 
     listen(){

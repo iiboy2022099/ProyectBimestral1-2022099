@@ -1,9 +1,10 @@
 import mongoose from 'mongoose';
 
-const RoleSchema = mongoose.Schema({
+const RoleSchema = mongoose.Schema ({
+
     role:{
         type: String,
-        required: [true, 'El role es obligatorio']
+        require: [true, 'el Role es obligatorio']
     }
 });
 

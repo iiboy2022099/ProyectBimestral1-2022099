@@ -2,6 +2,7 @@ import Role from '../role/role.model.js';
 import Admin from '../admin/admin.model.js';
 import Cliente from '../client/client.model.js';
 import Categoria from '../category/category.model.js';
+import Producto from '../products/products.model.js';
 
 export const esRoleValido = async (role = '') => {
     const existeRol = await Role.findOne({role});
@@ -37,3 +38,10 @@ export const existeCategoriaById = async (id = '') => {
     }
 }
 
+export const existeProductsById = async (id = '') => {
+    const existeProducto = await Producto.findById(id);
+    
+    if (!existeProducto){
+        throw new Error(`El ID: ${id} no existe`);
+    }
+}

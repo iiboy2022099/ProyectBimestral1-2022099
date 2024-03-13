@@ -10,6 +10,7 @@ import clienteRoutes from  '../src/client/client.routes.js';
 import authRoutes from '../src/auth/auth.routes.js';
 import categoriaRoutes from '../src/category/category.routes.js';
 import productRoutes from '../src/products/products.routes.js';
+import carritoRoutes from '../src/carrito/carrito.routes.js';
 
 
 class Server{
@@ -21,6 +22,7 @@ class Server{
         this.authPath = '/ProyectSystem/v3/auth';
         this.categoriaPath = '/ProyectSystem/v3/categoria';
         this.productsPath = '/ProyectSystem/v3/productos';
+        this.carritoPath =  '/ProyectSystem/v3/carrito';
 
         this.middlewares();
         this.conectarDB();
@@ -45,6 +47,7 @@ class Server{
         this.app.use(this.authPath, authRoutes);
         this.app.use(this.categoriaPath, categoriaRoutes);
         this.app.use(this.productsPath, productRoutes);
+        this.app.use(this.carritoPath, carritoRoutes);
 
     }
 

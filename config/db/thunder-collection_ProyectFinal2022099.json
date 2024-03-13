@@ -1,7 +1,7 @@
 {
     "client": "Thunder Client",
     "collectionName": "ProyectFinal2022099",
-    "dateExported": "2024-03-12T14:47:19.942Z",
+    "dateExported": "2024-03-13T02:06:20.682Z",
     "version": "1.1",
     "folders": [
         {
@@ -270,6 +270,150 @@
             ],
             "params": [],
             "reqType": "get",
+            "tests": []
+        },
+        {
+            "_id": "6f27836d-0715-4e17-98cc-d5d3f21c2c6f",
+            "colId": "4b7e51e0-4aa9-4a67-b5e9-84231240bf9c",
+            "containerId": "85951aae-9fb9-4167-b095-89e5cccf1e67",
+            "name": "postProduct",
+            "url": "http://localhost:3000/ProyectSystem/v3/productos",
+            "method": "POST",
+            "sortNum": 150000,
+            "created": "2024-03-12T15:33:54.937Z",
+            "modified": "2024-03-12T17:12:06.348Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWVmZGJjNTExOTlmMWU3YTU0Y2Y0ZjAiLCJpYXQiOjE3MTAyNjMzNjYsImV4cCI6MTcxMDI2Njk2Nn0.k99LPAlYH4e29lfIOHwWpScspxiGH9ASVHW9uB3g5M8"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nombre\": \"Chorizo\",\n  \"precio\": 21.40,\n  \"descripcion\": \"De la mejor calidad para acompañar en un asado\",\n  \"categoria\":\"Carnes de Animales\",\n  \"cantidad\": 10\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "cadf706c-36ca-4069-bffb-1dd5c4c827e8",
+            "colId": "4b7e51e0-4aa9-4a67-b5e9-84231240bf9c",
+            "containerId": "c0dc0c9a-cc67-42fd-9fa5-dd062b5d5676",
+            "name": "productsGet",
+            "url": "http://localhost:3000/ProyectSystem/v3/productos",
+            "method": "GET",
+            "sortNum": 160000,
+            "created": "2024-03-12T15:43:19.696Z",
+            "modified": "2024-03-12T15:43:31.736Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "32bd4df6-c2b7-4400-b927-1a390b2cab9d",
+            "colId": "4b7e51e0-4aa9-4a67-b5e9-84231240bf9c",
+            "containerId": "85951aae-9fb9-4167-b095-89e5cccf1e67",
+            "name": "putProducts",
+            "url": "http://localhost:3000/ProyectSystem/v3/productos/65f08ccd2ac7e13f9a486364",
+            "method": "PUT",
+            "sortNum": 170000,
+            "created": "2024-03-12T17:15:41.119Z",
+            "modified": "2024-03-12T18:01:02.908Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWVmZGJjNTExOTlmMWU3YTU0Y2Y0ZjAiLCJpYXQiOjE3MTAyNjMzNjYsImV4cCI6MTcxMDI2Njk2Nn0.k99LPAlYH4e29lfIOHwWpScspxiGH9ASVHW9uB3g5M8"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nombre\": \"Huesos de res\",\n  \"precio\": 15.99,\n  \"descripcion\": \"huesos de res, listo para un caldo\",\n  \"categoria\": \"Carnes de Animales\",\n  \"cantidad\": 0\n}\n",
+                "form": []
+            },
+            "reqType": "get",
+            "tests": []
+        },
+        {
+            "_id": "0575ddfc-5ae8-416e-baaf-80feb5382b0b",
+            "colId": "4b7e51e0-4aa9-4a67-b5e9-84231240bf9c",
+            "containerId": "85951aae-9fb9-4167-b095-89e5cccf1e67",
+            "name": "deleteProducts",
+            "url": "http://localhost:3000/ProyectSystem/v3/productos/65f08ccd2ac7e13f9a486364",
+            "method": "DELETE",
+            "sortNum": 190000,
+            "created": "2024-03-12T17:21:16.933Z",
+            "modified": "2024-03-12T17:21:46.551Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWVmZGJjNTExOTlmMWU3YTU0Y2Y0ZjAiLCJpYXQiOjE3MTAyNjMzNjYsImV4cCI6MTcxMDI2Njk2Nn0.k99LPAlYH4e29lfIOHwWpScspxiGH9ASVHW9uB3g5M8"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "48d899dd-0f3f-451a-9f11-5476b0e58742",
+            "colId": "4b7e51e0-4aa9-4a67-b5e9-84231240bf9c",
+            "containerId": "85951aae-9fb9-4167-b095-89e5cccf1e67",
+            "name": "getInventary",
+            "url": "http://localhost:3000/ProyectSystem/v3/productos/inventario",
+            "method": "GET",
+            "sortNum": 200000,
+            "created": "2024-03-12T17:36:58.705Z",
+            "modified": "2024-03-12T17:53:29.095Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "00fe544c-67cd-4e59-affd-6019292d9f53",
+            "colId": "4b7e51e0-4aa9-4a67-b5e9-84231240bf9c",
+            "containerId": "85951aae-9fb9-4167-b095-89e5cccf1e67",
+            "name": "GetproductosAgotados",
+            "url": "http://localhost:3000/ProyectSystem/v3/productos/productosAgotados",
+            "method": "GET",
+            "sortNum": 210000,
+            "created": "2024-03-12T17:59:50.360Z",
+            "modified": "2024-03-12T18:00:23.000Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "80a78830-5fc4-46b3-a020-040aec08ed24",
+            "colId": "4b7e51e0-4aa9-4a67-b5e9-84231240bf9c",
+            "containerId": "c0dc0c9a-cc67-42fd-9fa5-dd062b5d5676",
+            "name": "carritoPost",
+            "url": "http://localhost:3000/ProyectSystem/v3/carrito",
+            "method": "POST",
+            "sortNum": 240000,
+            "created": "2024-03-12T20:47:29.155Z",
+            "modified": "2024-03-13T02:05:28.451Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\r\n  \"fecha\": \"2024/06/10\",\r\n  \"cantidad\": 4,\r\n  \"estado\": \"completado\",\r\n  \"products\": \"leche pinito\"\r\n}\r\n\r\n",
+                "form": []
+            },
+            "reqType": "get",
+            "tests": []
+        },
+        {
+            "_id": "e32df4be-630d-4845-8c43-eec639d04e47",
+            "colId": "4b7e51e0-4aa9-4a67-b5e9-84231240bf9c",
+            "containerId": "c0dc0c9a-cc67-42fd-9fa5-dd062b5d5676",
+            "name": "getCarrito",
+            "url": "http://localhost:3000/ProyectSystem/v3/carrito",
+            "method": "GET",
+            "sortNum": 250000,
+            "created": "2024-03-13T01:58:22.958Z",
+            "modified": "2024-03-13T01:58:29.709Z",
+            "headers": [],
+            "params": [],
             "tests": []
         }
     ]
